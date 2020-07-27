@@ -13,6 +13,7 @@
 		044407F524CF35F1005072D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044407F324CF35F1005072D0 /* Main.storyboard */; };
 		044407F724CF35F2005072D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044407F624CF35F2005072D0 /* Assets.xcassets */; };
 		044407FA24CF35F2005072D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044407F824CF35F2005072D0 /* LaunchScreen.storyboard */; };
+		6C895C69485F4DA6429F6479 /* Pods_Fishing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E3D988AE04E77610C3502C /* Pods_Fishing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		044407F624CF35F2005072D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044407F924CF35F2005072D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044407FB24CF35F2005072D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15E3D988AE04E77610C3502C /* Pods_Fishing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fishing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF1E983F127CF5B13D2973C /* Pods-Fishing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishing.release.xcconfig"; path = "Target Support Files/Pods-Fishing/Pods-Fishing.release.xcconfig"; sourceTree = "<group>"; };
+		F78580A091C9F37EF29462ED /* Pods-Fishing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishing.debug.xcconfig"; path = "Target Support Files/Pods-Fishing/Pods-Fishing.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C895C69485F4DA6429F6479 /* Pods_Fishing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				044407EC24CF35F1005072D0 /* Fishing */,
 				044407EB24CF35F1005072D0 /* Products */,
+				9F4654A9A1D9541BA4784529 /* Pods */,
+				C3CE502837EF11366A5F7BD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = Fishing;
 			sourceTree = "<group>";
 		};
+		9F4654A9A1D9541BA4784529 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F78580A091C9F37EF29462ED /* Pods-Fishing.debug.xcconfig */,
+				AAF1E983F127CF5B13D2973C /* Pods-Fishing.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C3CE502837EF11366A5F7BD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15E3D988AE04E77610C3502C /* Pods_Fishing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 044407FE24CF35F2005072D0 /* Build configuration list for PBXNativeTarget "Fishing" */;
 			buildPhases = (
+				5D6D6935442A1BF14A8E4822 /* [CP] Check Pods Manifest.lock */,
 				044407E624CF35F1005072D0 /* Sources */,
 				044407E724CF35F1005072D0 /* Frameworks */,
 				044407E824CF35F1005072D0 /* Resources */,
+				1303BA0271171B79E7975F8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1303BA0271171B79E7975F8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fishing/Pods-Fishing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fishing/Pods-Fishing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fishing/Pods-Fishing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D6D6935442A1BF14A8E4822 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fishing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		044407E624CF35F1005072D0 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		044407FF24CF35F2005072D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F78580A091C9F37EF29462ED /* Pods-Fishing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		0444080024CF35F2005072D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAF1E983F127CF5B13D2973C /* Pods-Fishing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
