@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  FishingFishing
+//  Fishing
 //
-//  Created by mac on 22.07.2020.
-//  Copyright © 2020 mac. All rights reserved.
+//  Created by mac on 27.07.2020.
+//  Copyright © 2020 chabanenko. All rights reserved.
 //
 
 import UIKit
