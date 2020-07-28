@@ -6,5 +6,6 @@ target 'Fishing' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'R.swift'
 
 end
