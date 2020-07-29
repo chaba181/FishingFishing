@@ -7,5 +7,6 @@ target 'Fishing' do
 
   pod 'Alamofire'
   pod 'R.swift'
+  pod 'SwiftLint'
 
 end
