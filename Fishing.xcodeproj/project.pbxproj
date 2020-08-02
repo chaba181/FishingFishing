@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0443CF9024CFEA2B00F01894 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443CF8F24CFEA2B00F01894 /* R.generated.swift */; };
 		044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407ED24CF35F1005072D0 /* AppDelegate.swift */; };
 		044407F024CF35F1005072D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407EF24CF35F1005072D0 /* SceneDelegate.swift */; };
 		044407F224CF35F1005072D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407F124CF35F1005072D0 /* ViewController.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0443CF8F24CFEA2B00F01894 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		044407EA24CF35F1005072D0 /* Fishing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fishing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044407ED24CF35F1005072D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044407EF24CF35F1005072D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,14 +42,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0443CF8E24CFE9E000F01894 /* Resoueses */ = {
-			isa = PBXGroup;
-			children = (
-				0443CF8F24CFEA2B00F01894 /* R.generated.swift */,
-			);
-			path = Resoueses;
-			sourceTree = "<group>";
-		};
 		044407E124CF35F1005072D0 = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +63,6 @@
 		044407EC24CF35F1005072D0 /* Fishing */ = {
 			isa = PBXGroup;
 			children = (
-				0443CF8E24CFE9E000F01894 /* Resoueses */,
 				044407ED24CF35F1005072D0 /* AppDelegate.swift */,
 				044407EF24CF35F1005072D0 /* SceneDelegate.swift */,
 				044407F124CF35F1005072D0 /* ViewController.swift */,
@@ -110,7 +99,6 @@
 			buildConfigurationList = 044407FE24CF35F2005072D0 /* Build configuration list for PBXNativeTarget "Fishing" */;
 			buildPhases = (
 				5D6D6935442A1BF14A8E4822 /* [CP] Check Pods Manifest.lock */,
-				0443CF8D24CFE55B00F01894 /* R.Swift */,
 				044407E624CF35F1005072D0 /* Sources */,
 				044407E724CF35F1005072D0 /* Frameworks */,
 				044407E824CF35F1005072D0 /* Resources */,
@@ -173,26 +161,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0443CF8D24CFE55B00F01894 /* R.Swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
-			);
-			name = R.Swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
-		};
 		0443CF9124D12A3B00F01894 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
@@ -260,7 +228,6 @@
 				044407F224CF35F1005072D0 /* ViewController.swift in Sources */,
 				044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */,
 				044407F024CF35F1005072D0 /* SceneDelegate.swift in Sources */,
-				0443CF9024CFEA2B00F01894 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
