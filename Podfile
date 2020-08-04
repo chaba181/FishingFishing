@@ -7,5 +7,6 @@ target 'Fishing' do
 
   pod 'Alamofire'
   pod 'SwiftLint'
+  pod 'FSCalendar'
 
 end
