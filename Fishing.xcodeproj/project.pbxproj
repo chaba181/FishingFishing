@@ -10,9 +10,10 @@
 		044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407ED24CF35F1005072D0 /* AppDelegate.swift */; };
 		044407F024CF35F1005072D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407EF24CF35F1005072D0 /* SceneDelegate.swift */; };
 		044407F224CF35F1005072D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407F124CF35F1005072D0 /* ViewController.swift */; };
-		044407F524CF35F1005072D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044407F324CF35F1005072D0 /* Main.storyboard */; };
 		044407F724CF35F2005072D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044407F624CF35F2005072D0 /* Assets.xcassets */; };
 		044407FA24CF35F2005072D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044407F824CF35F2005072D0 /* LaunchScreen.storyboard */; };
+		0449830824DA6D1800DFB433 /* CreateFishingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */; };
+		0449830A24DAA10100DFB433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0449830924DAA10100DFB433 /* Main.storyboard */; };
 		6C895C69485F4DA6429F6479 /* Pods_Fishing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E3D988AE04E77610C3502C /* Pods_Fishing.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,10 +22,11 @@
 		044407ED24CF35F1005072D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044407EF24CF35F1005072D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		044407F124CF35F1005072D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		044407F424CF35F1005072D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044407F624CF35F2005072D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044407F924CF35F2005072D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044407FB24CF35F2005072D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFishingViewController.swift; sourceTree = "<group>"; };
+		0449830924DAA10100DFB433 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		15E3D988AE04E77610C3502C /* Pods_Fishing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fishing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF1E983F127CF5B13D2973C /* Pods-Fishing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishing.release.xcconfig"; path = "Target Support Files/Pods-Fishing/Pods-Fishing.release.xcconfig"; sourceTree = "<group>"; };
 		F78580A091C9F37EF29462ED /* Pods-Fishing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishing.debug.xcconfig"; path = "Target Support Files/Pods-Fishing/Pods-Fishing.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,8 +68,9 @@
 				044407ED24CF35F1005072D0 /* AppDelegate.swift */,
 				044407EF24CF35F1005072D0 /* SceneDelegate.swift */,
 				044407F124CF35F1005072D0 /* ViewController.swift */,
-				044407F324CF35F1005072D0 /* Main.storyboard */,
+				0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */,
 				044407F624CF35F2005072D0 /* Assets.xcassets */,
+				0449830924DAA10100DFB433 /* Main.storyboard */,
 				044407F824CF35F2005072D0 /* LaunchScreen.storyboard */,
 				044407FB24CF35F2005072D0 /* Info.plist */,
 			);
@@ -152,9 +155,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0449830A24DAA10100DFB433 /* Main.storyboard in Resources */,
 				044407FA24CF35F2005072D0 /* LaunchScreen.storyboard in Resources */,
 				044407F724CF35F2005072D0 /* Assets.xcassets in Resources */,
-				044407F524CF35F1005072D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				044407F224CF35F1005072D0 /* ViewController.swift in Sources */,
+				0449830824DA6D1800DFB433 /* CreateFishingViewController.swift in Sources */,
 				044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */,
 				044407F024CF35F1005072D0 /* SceneDelegate.swift in Sources */,
 			);
@@ -234,14 +238,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		044407F324CF35F1005072D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				044407F424CF35F1005072D0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		044407F824CF35F2005072D0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
