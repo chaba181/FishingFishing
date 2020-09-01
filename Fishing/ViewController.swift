@@ -1,19 +1,14 @@
-//
-//  ViewController.swift
-//  Fishing
-//
-//  Created by mac on 27.07.2020.
-//  Copyright © 2020 chabanenko. All rights reserved.
-//
 
 import UIKit
 import Alamofire
 import FSCalendar
 
 class ViewController: UIViewController {
+    
     fileprivate weak var calendar: FSCalendar!
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 //     let calendar = FSCalendar(frame: CGRect(x: 0, y: 0, width: 320, height: 300))
 //        calendar.dataSource = self

@@ -87,37 +87,75 @@
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Название" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pxc-d9-LSk">
                                 <rect key="frame" x="20" y="150" width="374" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="osO-qK-VVN"/>
+                                    <constraint firstAttribute="width" constant="374" id="LnB-w0-aXg"/>
+                                    <constraint firstAttribute="height" constant="34" id="ljq-yj-pra"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Выберите дату" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KcK-g3-Evz">
-                                <rect key="frame" x="20" y="224" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Выберите дату" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KcK-g3-Evz">
+                                <rect key="frame" x="20" y="221" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="Mwn-Ss-cXe"/>
+                                    <constraint firstAttribute="height" constant="34" id="mOu-xM-kt5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Заметки" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Krr-OZ-BuV">
-                                <rect key="frame" x="20" y="323" width="374" height="196"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Заметки" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Krr-OZ-BuV">
+                                <rect key="frame" x="20" y="303" width="374" height="196"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="0G3-1J-4fx"/>
+                                    <constraint firstAttribute="width" constant="374" id="QfC-kV-Kkr"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iul-ph-JSA">
+                                <rect key="frame" x="1" y="561" width="246" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4Y-3Y-i9X">
+                                <rect key="frame" x="255" y="560" width="139" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="124"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="chosseImage:" destination="AME-fl-uRo" eventType="touchUpInside" id="bsj-TB-UIT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXb-qT-Xc1">
+                                <rect key="frame" x="146" y="764" width="122" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Сохранить">
+                                    <color key="titleColor" red="0.035284633709999999" green="0.023310816509999999" blue="0.37874433289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveData:" destination="AME-fl-uRo" eventType="touchUpInside" id="DqS-Ug-9Ld"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58279097540000002" green="0.83968709689999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pxc-d9-LSk" firstAttribute="leading" secondItem="eQy-uc-An5" secondAttribute="leading" constant="20" id="IvG-Ng-61z"/>
-                            <constraint firstItem="eQy-uc-An5" firstAttribute="trailing" secondItem="pxc-d9-LSk" secondAttribute="trailing" constant="20" id="Xir-Rx-hUc"/>
-                            <constraint firstItem="pxc-d9-LSk" firstAttribute="top" secondItem="XGO-bU-ali" secondAttribute="bottom" constant="62" id="t7z-aA-M0o"/>
+                            <constraint firstItem="KcK-g3-Evz" firstAttribute="top" secondItem="pxc-d9-LSk" secondAttribute="bottom" constant="37" id="Hyq-kN-chh"/>
+                            <constraint firstItem="eQy-uc-An5" firstAttribute="trailing" secondItem="KcK-g3-Evz" secondAttribute="trailing" constant="20" id="a16-dI-ljR"/>
+                            <constraint firstItem="eQy-uc-An5" firstAttribute="trailing" secondItem="Krr-OZ-BuV" secondAttribute="trailing" constant="20" id="aZW-lz-lR9"/>
+                            <constraint firstItem="Krr-OZ-BuV" firstAttribute="leading" secondItem="eQy-uc-An5" secondAttribute="leading" constant="20" id="abr-a8-TZo"/>
+                            <constraint firstItem="Krr-OZ-BuV" firstAttribute="top" secondItem="KcK-g3-Evz" secondAttribute="bottom" constant="48" id="agP-uj-wDQ"/>
+                            <constraint firstItem="pxc-d9-LSk" firstAttribute="leading" secondItem="eQy-uc-An5" secondAttribute="leading" constant="20" id="cfF-wi-9ES"/>
+                            <constraint firstItem="pxc-d9-LSk" firstAttribute="top" secondItem="XGO-bU-ali" secondAttribute="bottom" constant="62" id="ot9-8Q-Box"/>
+                            <constraint firstItem="KcK-g3-Evz" firstAttribute="leading" secondItem="eQy-uc-An5" secondAttribute="leading" constant="20" id="pPQ-DG-l7f"/>
+                            <constraint firstItem="eQy-uc-An5" firstAttribute="trailing" secondItem="pxc-d9-LSk" secondAttribute="trailing" constant="20" id="zfq-fV-iyT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eQy-uc-An5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Fishing" id="ChQ-pB-sKs"/>
                     <connections>
                         <outlet property="dateTxt" destination="KcK-g3-Evz" id="do0-vz-PpH"/>
+                        <outlet property="imageView" destination="iul-ph-JSA" id="xhA-eH-EKz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lL9-DD-EdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -125,4 +163,7 @@
             <point key="canvasLocation" x="842.02898550724649" y="105.80357142857143"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+    </resources>
 </document>
