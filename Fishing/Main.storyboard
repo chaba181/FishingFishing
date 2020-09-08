@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tth-Py-Tpj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tth-Py-Tpj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -44,6 +44,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="YJq-F7-6sn"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xuY-oD-Gld"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.58279097540000002" green="0.83968709689999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,6 +68,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tbldViewData" destination="sB0-Z2-UXg" id="41a-Jz-cbB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,9 +140,16 @@
                                     <color key="titleColor" red="0.035284633709999999" green="0.023310816509999999" blue="0.37874433289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveData:" destination="AME-fl-uRo" eventType="touchUpInside" id="DqS-Ug-9Ld"/>
+                                    <action selector="addInfo:" destination="AME-fl-uRo" eventType="touchUpInside" id="TVA-Aw-TWK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSi-eF-Qae">
+                                <rect key="frame" x="325" y="784" width="69" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.58279097540000002" green="0.83968709689999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -156,6 +169,8 @@
                     <connections>
                         <outlet property="dateTxt" destination="KcK-g3-Evz" id="do0-vz-PpH"/>
                         <outlet property="imageView" destination="iul-ph-JSA" id="xhA-eH-EKz"/>
+                        <outlet property="noteTxt" destination="Krr-OZ-BuV" id="UaB-fO-cIy"/>
+                        <outlet property="titleTextField" destination="pxc-d9-LSk" id="G9p-8x-y9H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lL9-DD-EdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

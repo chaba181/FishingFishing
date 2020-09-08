@@ -1,28 +1,36 @@
 
 import UIKit
+import CoreData
 
 class CreateFishingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
+    @IBOutlet weak var noteTxt: UITextView!
+    // название
+    @IBOutlet weak var titleTextField: UITextField!
+    // дата
     @IBOutlet weak var dateTxt: UITextField!
     
     lazy var datePicker = UIDatePicker()
     
     @IBOutlet weak var imageView: UIImageView!
     
+    var onDataAdded: ((FishingInfo) -> Void)?
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         createDatePicker()
+        
     }
-    
+       
+    // добавляем данные
+    // /// // /
     @IBAction func chosseImage(_ sender: Any) {
         
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         
         let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a photo", preferredStyle: .actionSheet)
-        
         
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action: UIAlertAction) in
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -84,8 +92,33 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         self.view.endEditing(true)
     }
     
-    @IBAction func saveData(_ sender: Any) {
-        
+    @IBAction func addInfo(_ sender: Any) {
+        let name = titleTextField.text
+        let data = dateTxt.text
+       if name != nil && data != nil {
+           let addInfo = self.saveName(name: name!, data: data!)
+           if let addInfo = addInfo {
+               onDataAdded?(addInfo)
+                navigationController?.popViewController(animated: true)
+            
+        }
+        }
     }
+    
+    func saveName (name: String, data: String) -> FishingInfo? {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let person = FishingInfo(entity: FishingInfo.entity(), insertInto: context)
+        person.setValue(name, forKey: "title")
+        person.setValue(data, forKey: "timeData")
+                
+                do {
+                    try context.save()
+                    return person
+                }  catch let error as NSError {
+                    return nil
+                    print("Could not save \(error) , \(error.userInfo)")
+                }
+                
+            }
     
 }
