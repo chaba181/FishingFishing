@@ -31,8 +31,8 @@ class FishingDetailViewController: UIViewController {
     
     func updateName (name: String?, data: String?, note: String?, image: Data?) {
         guard let id = fish?.id else { return }
-        let appDelegatr = UIApplication.shared.delegate as! AppDelegate
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        guard (UIApplication.shared.delegate as? AppDelegate) != nil else { return }
+        guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else { return }
         //needed to fetch request
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FishingInfo")
         //predicate to match task on id
@@ -42,6 +42,7 @@ class FishingDetailViewController: UIViewController {
         guard let info = results?.first as? FishingInfo else { return }
         
         info.title = name
+        info.notes = note
         
         try? context.save()
         self.onDataAdded?(info)

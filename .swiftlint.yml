@@ -15,9 +15,9 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Source/ExcludedFolder
   - Source/ExcludedFile.swift
   - Source/*/ExcludedFile.swift # Exclude files with a wildcard
+  - R.generated.swift
 analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
   - explicit_self
-  - Fishing/Resources/R.generated.swift
    
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
@@ -26,7 +26,7 @@ force_try:
   severity: warning # explicitly
 # rules that have both warning and error levels, can set just the warning level
 # implicitly
-line_length: 160
+line_length: 200
 # they can set both implicitly with an array
 type_body_length:
   - 300 # warning

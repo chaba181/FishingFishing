@@ -1,15 +1,17 @@
-
 import UIKit
 import CoreData
 
 class CreateFishingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var noteTxt: UITextView!
-    // название
-    @IBOutlet weak var titleTextField: UITextField!
-    // дата
-    @IBOutlet weak var dateTxt: UITextField!
-    // image
+    @IBOutlet private var noteTxt: UITextView!
+
+    @IBOutlet private var titleTextField: UITextField!
+    
+    @IBOutlet private var dateTxt: UITextField!
+    
+    var imagePicker = ImagePicker()
+    
+    var openPhoto = ImageCell()
     
     lazy var datePicker = UIDatePicker()
     
@@ -22,6 +24,8 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         didSet { collectionVIew.reloadData() }
     }
     
+    
+    
     @IBOutlet weak var collectionVIew: UICollectionView!
     
     override func viewDidLoad() {
@@ -32,45 +36,14 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         
         collectionVIew.delegate = self
         collectionVIew.dataSource = self
+        imagePicker.didImagePick = { [weak self] image in
+            self?.images.append(image)
+         
+        }
+        imagePicker.didPickingCancel = { [weak self] in
+            self?.showCanceledAllert()
+        }
     }
-    
-    // добавляем данныe
-    func pickImage() {
-        imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        
-        let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a photo", preferredStyle: .actionSheet)
-        
-        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { action in
-            if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                self.imagePickerController.sourceType = .camera
-                self.present(self.imagePickerController, animated: true, completion: nil)
-            } else {
-                print("Cammera not available")
-            }
-            
-        }))
-        
-        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action: UIAlertAction) in
-            self.imagePickerController.sourceType = .photoLibrary
-            self.present(self.imagePickerController, animated: true, completion: nil)
-            
-        }))
-        
-        actionSheet.addAction(UIAlertAction(title: "Cencel", style: .cancel, handler: nil ))
-        
-        self.present(actionSheet, animated: true, completion: nil)
-    }
-    //Почитать и коммент
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        images.append(image)
-        picker.dismiss(animated: true, completion: nil)
-    }
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
     
     func createDatePicker () {
         
@@ -105,72 +78,63 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         let name = titleTextField.text
         let data = dateTxt.text
         let note = noteTxt.text
-        
+        let photo1 = NSMutableArray()
+        for imgg in images {
+            let data : NSData = NSData(data: imgg.pngData()!)
+            photo1.add(data)
+        }
+        let photoObject =  NSKeyedArchiver.archivedData(withRootObject: photo1)
+        // let photo = images.first?.pngData()
+        if (NSKeyedUnarchiver.unarchiveObject(with: photoObject) as? NSArray) != nil {
         if name != nil && data != nil && note != nil {
-            let addInfo = self.saveName(name: name!, data: data!, note: note!)
+            let addInfo = self.saveName(name: name!, data: data!, note: note!, photo: photoObject)
             if let addInfo = addInfo {
                 onDataAdded?(addInfo)
                 navigationController?.popViewController(animated: true)
                 
             }
         }
+        }
     }
     // добавляем данные при нажатии на save
-    func saveName (name: String, data: String, note: String) -> FishingInfo? {
+    func saveName (name: String, data: String, note: String, photo: Data) -> FishingInfo? {
         // 1 alert если не добавили титул и дату
         if dateTxt.text!.isEmpty && titleTextField.text!.isEmpty {
             let action = UIAlertController(title: "Внимание!", message: "Поле Дата и Название должны быть заполнены", preferredStyle: .alert)
-            action.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            action.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
             }))
             self.present(action, animated: true, completion: nil)
             return nil
         } else {
             
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else {return nil}
             let person = FishingInfo(entity: FishingInfo.entity(), insertInto: context)
-            // image
             
             person.setValue(name, forKey: "title")
             person.setValue(data, forKey: "timeData")
             person.setValue(note, forKey: "notes")
+            person.setValue(photo, forKey: "photo")
             person.setValue("\(Date().timeIntervalSince1970)", forKey: "id")
-            
+                        
             do {
                 try context.save()
                 return person
-            }  catch let error as NSError {
-                return nil
+            } catch let error as NSError {
                 print("Could not save \(error) , \(error.userInfo)")
+                return nil
             }
         }
     }
-    //    func alert () {
-    //        if dateTxt.text!.isEmpty && titleTextField.text!.isEmpty {
-    //                let action = UIAlertController(title: "Внимание!", message: "Поле Дата и Название должны быть заполнены", preferredStyle: .alert)
-    //                action.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-    //                }))
-    //                self.present(action, animated: true, completion: nil)
-    //            }
-    //        if titleTextField.text!.isEmpty {
-    //            let action = UIAlertController(title: "Внимание!", message: "Поле Название должно быть заполнено", preferredStyle: .alert)
-    //            action.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-    //            }))
-    //            self.present(action, animated: true, completion: nil)
-    //        }
-    //
-    //        if dateTxt.text!.isEmpty {
-    //            let action = UIAlertController(title: "Внимание!", message: "Поле Дата должно быть заполнено", preferredStyle: .alert)
-    //            action.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-    //            }))
-    //            self.present(action, animated: true, completion: nil)
-    //        }
-    //        }
-    //}
+    func showCanceledAllert() {
+        let allert = UIAlertController(title: "Внимание", message: "Вы отменили выбор картинки", preferredStyle: .alert)
+        allert.addAction( UIAlertAction(title: "OK", style: .cancel, handler: { _ in }))
+        self.present(allert, animated: true, completion: nil)
+    }
 }
 
 // UICollectionViewDataSource
 
-extension CreateFishingViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension CreateFishingViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count + 1
     }
@@ -183,8 +147,8 @@ extension CreateFishingViewController: UICollectionViewDataSource, UICollectionV
             cell = plusCell
             
             if let cell = cell as? PlusButtonCell {
-                cell.onAddButtonClick = { [weak self] in
-                    self?.pickImage()
+                cell.onAddButtonClick = { [unowned self] in
+                    self.imagePicker.pickImage(from: self)
                 }
             }
         } else {
@@ -197,5 +161,9 @@ extension CreateFishingViewController: UICollectionViewDataSource, UICollectionV
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
     }
 }
