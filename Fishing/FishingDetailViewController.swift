@@ -10,19 +10,24 @@ import UIKit
 import CoreData
 
 class FishingDetailViewController: UIViewController {
-    @IBOutlet weak var fishingData: UITextField!
-    @IBOutlet weak var fishingName: UITextField!
-    @IBOutlet weak var fishingNote: UITextView!
-    @IBOutlet weak var fishingImage: UIImageView!
+    @IBOutlet private weak var fishingData: UITextField!
+    @IBOutlet private weak var fishingName: UITextField!
+    @IBOutlet private weak var fishingNote: UITextView!
+    @IBOutlet private weak var fishingImage: UIImageView!
     var fish: FishingInfo?
     var onDataAdded: ((FishingInfo) -> Void)?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fishingName.text = fish?.title
         fishingNote.text = fish?.notes
-        fishingImage.image = fish?.photo.flatMap { UIImage(data: $0) }
+        guard let data = fish?.photo else {return}
+        guard let loadedImage = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [Data] else {return}
+        fishingImage.image = UIImage(data: loadedImage.first ?? Data())
+       // fishingImage.image = fish?.photo.flatMap { UIImage(data: $0) }
         fishingData.text = fish?.timeData
+            
     }
     
     @IBAction func addChangeFishingInfo(_ sender: Any) {

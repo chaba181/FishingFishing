@@ -24,8 +24,6 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         didSet { collectionVIew.reloadData() }
     }
     
-    
-    
     @IBOutlet weak var collectionVIew: UICollectionView!
     
     override func viewDidLoad() {
@@ -79,20 +77,21 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         let data = dateTxt.text
         let note = noteTxt.text
         let photo1 = NSMutableArray()
+        var imageData = Data()
         for imgg in images {
             let data : NSData = NSData(data: imgg.pngData()!)
             photo1.add(data)
         }
-        let photoObject =  NSKeyedArchiver.archivedData(withRootObject: photo1)
+        
+        guard let photoObject = try? NSKeyedArchiver.archivedData(withRootObject: photo1, requiringSecureCoding: false) else {return}
+            imageData = photoObject
         // let photo = images.first?.pngData()
-        if (NSKeyedUnarchiver.unarchiveObject(with: photoObject) as? NSArray) != nil {
         if name != nil && data != nil && note != nil {
-            let addInfo = self.saveName(name: name!, data: data!, note: note!, photo: photoObject)
+            let addInfo = self.saveName(name: name!, data: data!, note: note!, photo: imageData)
             if let addInfo = addInfo {
                 onDataAdded?(addInfo)
                 navigationController?.popViewController(animated: true)
                 
-            }
         }
         }
     }
