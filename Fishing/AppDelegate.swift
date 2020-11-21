@@ -8,7 +8,12 @@
 
 import UIKit
 import CoreData
-
+#warning("Сделай структуру папок в проекте, чтоб все было структурировано, хотябы сториборды в одной, котроллеры в другой, модели и хелперы")
+#warning("следи за форматированием кода")
+#warning("удаляй ненужный код и коммнтарии")
+#warning("следи за наименованием методов и переменных")
+#warning("старайся делать меньше лоигки в контролерах(например операции с бд - выноси все по отдельным классам")
+#warning("Почитый за принципы Solid и постарайся привести свой код близко к ним, особенно проблема с тем что один класс должен выполнять только свои одни специфические действия")
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        #warning("сделать")
        // let index: CGFloat? = 1
         
         //1. Разопционалить через if let

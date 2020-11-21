@@ -23,6 +23,7 @@ class FishingDetailViewController: UIViewController {
         fishingName.text = fish?.title
         fishingNote.text = fish?.notes
         guard let data = fish?.photo else {return}
+        #warning("убери warning")
         guard let loadedImage = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [Data] else {return}
         fishingImage.image = UIImage(data: loadedImage.first ?? Data())
        // fishingImage.image = fish?.photo.flatMap { UIImage(data: $0) }
@@ -31,6 +32,7 @@ class FishingDetailViewController: UIViewController {
     }
     
     @IBAction func addChangeFishingInfo(_ sender: Any) {
+        #warning("Название метода старнное")
         updateName(name: fishingName.text, data: "", note: fishingNote.text, image: nil)
     }
     
@@ -39,6 +41,7 @@ class FishingDetailViewController: UIViewController {
         guard (UIApplication.shared.delegate as? AppDelegate) != nil else { return }
         guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else { return }
         //needed to fetch request
+        #warning("Сделай какой-то класс DB Manager который будет заниматься всеми операци с базой данных")
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FishingInfo")
         //predicate to match task on id
         fetchRequest.predicate = NSPredicate(format: "id = %@", id)
