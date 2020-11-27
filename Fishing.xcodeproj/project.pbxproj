@@ -75,11 +75,11 @@
 			children = (
 				044407ED24CF35F1005072D0 /* AppDelegate.swift */,
 				044697D6255C4E64006F6F72 /* ImagePicker.swift */,
-				04A1E22C251BC591003A537B /* LaunchScreen.storyboard */,
 				044407F124CF35F1005072D0 /* ViewController.swift */,
 				0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */,
 				04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */,
 				044407F624CF35F2005072D0 /* Assets.xcassets */,
+				04A1E22C251BC591003A537B /* LaunchScreen.storyboard */,
 				0449830924DAA10100DFB433 /* Main.storyboard */,
 				0449C6432506C060002FFA48 /* Model.xcdatamodeld */,
 				044407FB24CF35F2005072D0 /* Info.plist */,
