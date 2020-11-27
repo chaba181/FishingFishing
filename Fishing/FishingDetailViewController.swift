@@ -14,6 +14,7 @@ class FishingDetailViewController: UIViewController {
     @IBOutlet private weak var fishingName: UITextField!
     @IBOutlet private weak var fishingNote: UITextView!
     @IBOutlet private weak var fishingImage: UIImageView!
+    #warning("private?")
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     
     var fish: FishingInfo?
@@ -31,6 +32,7 @@ class FishingDetailViewController: UIViewController {
         #warning("убери warning")
         guard let loadedImage = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [Data] else {return}
         images = loadedImage.compactMap({ UIImage(data: $0) })
+        #warning("закоменченый код")
        // fishingImage.image = fish?.photo.flatMap { UIImage(data: $0) }
         fishingData.text = fish?.timeData
             
@@ -48,7 +50,11 @@ class FishingDetailViewController: UIViewController {
         //needed to fetch request
         #warning("Сделай какой-то класс DB Manager который будет заниматься всеми операци с базой данных")
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FishingInfo")
+        
+        #warning("закоменченый код")
         //predicate to match task on id
+        
+        #warning("вынеси в отедльный метод")
         fetchRequest.predicate = NSPredicate(format: "id = %@", id)
         let results = try? context.fetch(fetchRequest) as? [NSManagedObject]
         
@@ -63,6 +69,7 @@ class FishingDetailViewController: UIViewController {
     }
 }
 
+#warning("Тебе туту еще надо будет почитать на каком метод подписаться для того чтобы pagecontroll правильно менялся")
 extension FishingDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count

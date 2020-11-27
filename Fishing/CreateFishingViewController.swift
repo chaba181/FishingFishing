@@ -24,6 +24,7 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         didSet { collectionVIew.reloadData() }
     }
     
+    #warning("оутлеты вверх")
     @IBOutlet weak var collectionVIew: UICollectionView!
     
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         
         collectionVIew.delegate = self
         collectionVIew.dataSource = self
+        #warning("Разберись с memory maangment, retain cycle и зачем здесь нужен weak self")
         imagePicker.didImagePick = { [weak self] image in
             self?.images.append(image)
          
@@ -63,7 +65,7 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         datePicker.datePickerMode = .date
     }
     @objc private func donePressed () {
-        #warning("Сделай отдельный класс DateHelper")
+        #warning("Сделай отдельный класс DateHelper который будет синглтоном и будет уметь работать с датой")
         // fornatter
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -85,6 +87,7 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         #warning("убери варнинг")
         guard let photoObject = try? NSKeyedArchiver.archivedData(withRootObject: photo1, requiringSecureCoding: false) else {return}
             imageData = photoObject
+        #warning("закоменченый код")
         // let photo = images.first?.pngData()
         #warning("перепеши через if let или guard let")
         if name != nil && data != nil && note != nil {
@@ -97,6 +100,8 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         }
         }
     }
+    
+    #warning("закоменченый код")
     // добавляем данные при нажатии на save
     func saveName (name: String, data: String, note: String, photo: Data) -> FishingInfo? {
         // 1 alert если не добавили титул и дату
@@ -115,7 +120,7 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
             #warning("почему person?")
             let person = FishingInfo(entity: FishingInfo.entity(), insertInto: context)
             
-            #warning("Вынеси все ключи в отдельный клас FishingInfoKeys и обращайся к ним только оттуда в идеале вообще сделай extension к FisingInfo")
+            #warning("Вынеси все ключи в отдельный клас FishingInfoKeys и обращайся к ним только оттуда в идеале вообще сделай extension к FisingInfo + вынеси это в отедльный метод")
             person.setValue(name, forKey: "title")
             person.setValue(data, forKey: "timeData")
             person.setValue(note, forKey: "notes")

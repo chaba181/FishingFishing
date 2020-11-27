@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     
     private weak var calendar: FSCalendar!
     
+    #warning("Выноси оутлеты в самый вверх класса")
     @IBOutlet private var tbldViewData: UITableView!
     
     private var info = [FishingInfo]()
@@ -78,6 +79,7 @@ extension ViewController: FSCalendarDataSource, FSCalendarDelegate, UITableViewD
         controller.onDataAdded = { [weak self] fishingInfo in
             self?.tbldViewData.reloadData()
         }
+        #warning("Закоменченый код")
         //tableView.cellForRow(at: indexPath)?.textLabel?.text
         navigationController?.pushViewController(controller, animated: true)
     }
