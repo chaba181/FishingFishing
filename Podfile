@@ -8,5 +8,6 @@ target 'Fishing' do
   pod 'Alamofire'
   pod 'SwiftLint'
   pod 'FSCalendar'
+  pod 'IQKeyboardManagerSwift', '6.3.0'
 
 end

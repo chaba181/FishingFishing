@@ -10,20 +10,18 @@ import Foundation
 import UIKit
 class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     #warning("Добавь сюда возможность кропать картинки, почитай что такое crop imag for UIPickerViewContrller, сделай это параметром этого класса")
-    #warning("Private?")
-    var imagePickerController: UIImagePickerController
+    private var imagePickerController: UIImagePickerController
     var didImagePick: ((UIImage) -> Void)?
     var didPickingCancel: (() -> Void)?
     
     override init() {
         imagePickerController  = UIImagePickerController()
         super.init()
+        imagePickerController.delegate = self
     }
     
     func pickImage(from viewCotroller: UIViewController) {
-        imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        #warning("это уже есть в инициализаторе, перенеси делегат туда же")
+        
         let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a photo", preferredStyle: .actionSheet)
         
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
@@ -33,8 +31,6 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
                 self.imagePickerController.sourceType = .camera
                 viewCotroller.present(self.imagePickerController, animated: true, completion: nil)
             } else {
-                #warning("нужен ли нам этот принт?")
-                print("Cammera not available")
             }
             
         }))

@@ -10,12 +10,13 @@ import UIKit
 import CoreData
 
 class FishingDetailViewController: UIViewController {
+    //dateTextField
+    //txtDate
     @IBOutlet private weak var fishingData: UITextField!
     @IBOutlet private weak var fishingName: UITextField!
     @IBOutlet private weak var fishingNote: UITextView!
     @IBOutlet private weak var fishingImage: UIImageView!
-    #warning("private?")
-    @IBOutlet weak var sliderCollectionView: UICollectionView!
+    @IBOutlet private weak var sliderCollectionView: UICollectionView!
     
     var fish: FishingInfo?
     
@@ -29,17 +30,14 @@ class FishingDetailViewController: UIViewController {
         fishingName.text = fish?.title
         fishingNote.text = fish?.notes
         guard let data = fish?.photo else {return}
-        #warning("убери warning")
         guard let loadedImage = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [Data] else {return}
         images = loadedImage.compactMap({ UIImage(data: $0) })
-        #warning("закоменченый код")
-       // fishingImage.image = fish?.photo.flatMap { UIImage(data: $0) }
         fishingData.text = fish?.timeData
+        self.hideKeyboardWhenTappedaround()
             
     }
     
-    @IBAction func addChangeFishingInfo(_ sender: Any) {
-        #warning("Название метода старнное")
+    @IBAction func updateFishingInfo(_ sender: Any) {
         updateName(name: fishingName.text, data: "", note: fishingNote.text, image: nil)
     }
     
@@ -50,9 +48,6 @@ class FishingDetailViewController: UIViewController {
         //needed to fetch request
         #warning("Сделай какой-то класс DB Manager который будет заниматься всеми операци с базой данных")
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FishingInfo")
-        
-        #warning("закоменченый код")
-        //predicate to match task on id
         
         #warning("вынеси в отедльный метод")
         fetchRequest.predicate = NSPredicate(format: "id = %@", id)
@@ -73,7 +68,6 @@ class FishingDetailViewController: UIViewController {
 extension FishingDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -83,4 +77,8 @@ extension FishingDetailViewController: UICollectionViewDelegate, UICollectionVie
         }
         return cell
     }
+    
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+//    }
 }

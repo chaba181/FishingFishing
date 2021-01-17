@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-#warning("Сделай структуру папок в проекте, чтоб все было структурировано, хотябы сториборды в одной, котроллеры в другой, модели и хелперы")
+import IQKeyboardManagerSwift
 #warning("следи за форматированием кода, делай одинаковые отступы везде, табулирование")
 #warning("удаляй ненужный код и коммнтарии")
 #warning("следи за наименованием методов и переменных")
@@ -20,19 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        #warning("сделать")
-       // let index: CGFloat? = 1
-        
-        //1. Разопционалить через if let
-        
-        //2. Разопционалить через guard let
-        
-        //3. Розопционалить через flatMap
-        
-        //4. Разопционалить через дефолтное значение
-        
-        //5*. Разопционалить через switch
+        IQKeyboardManager.shared.enable = true
         
         return true
     }

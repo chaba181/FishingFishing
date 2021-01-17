@@ -7,26 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044070782577FAF70055FC2A /* TextFieldWithDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044070772577FAF70055FC2A /* TextFieldWithDataPicker.swift */; };
+		0440707B25780ACA0055FC2A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440707A25780ACA0055FC2A /* Presenter.swift */; };
 		04420BF6250821D8006AE7AA /* FishingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */; };
 		044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407ED24CF35F1005072D0 /* AppDelegate.swift */; };
 		044407F224CF35F1005072D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407F124CF35F1005072D0 /* ViewController.swift */; };
-		044407F724CF35F2005072D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044407F624CF35F2005072D0 /* Assets.xcassets */; };
 		044470BF2523989400F96D43 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044470BE2523989400F96D43 /* ImageCell.swift */; };
 		044470C2252398A600F96D43 /* PlusButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044470C1252398A600F96D43 /* PlusButtonCell.swift */; };
 		044697D7255C4E64006F6F72 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044697D6255C4E64006F6F72 /* ImagePicker.swift */; };
 		0449830824DA6D1800DFB433 /* CreateFishingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */; };
 		0449830A24DAA10100DFB433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0449830924DAA10100DFB433 /* Main.storyboard */; };
 		0449C6492506C333002FFA48 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0449C6432506C060002FFA48 /* Model.xcdatamodeld */; };
+		0470685625ACD15700CC6E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0470685525ACD15700CC6E09 /* Assets.xcassets */; };
 		04A1E22D251BC591003A537B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A1E22C251BC591003A537B /* LaunchScreen.storyboard */; };
 		A062D2EE0406C3E0B3BAA989 /* Pods_Fishing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D216474F2CF4FFB56F67C4F /* Pods_Fishing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044070772577FAF70055FC2A /* TextFieldWithDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDataPicker.swift; sourceTree = "<group>"; };
+		0440707A25780ACA0055FC2A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingDetailViewController.swift; sourceTree = "<group>"; };
 		044407EA24CF35F1005072D0 /* Fishing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fishing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044407ED24CF35F1005072D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044407F124CF35F1005072D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		044407F624CF35F2005072D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044407FB24CF35F2005072D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044470BE2523989400F96D43 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		044470C1252398A600F96D43 /* PlusButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButtonCell.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFishingViewController.swift; sourceTree = "<group>"; };
 		0449830924DAA10100DFB433 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0449C6442506C060002FFA48 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0470685525ACD15700CC6E09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Assets.xcassets"; sourceTree = "<group>"; };
 		04A1E22C251BC591003A537B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D216474F2CF4FFB56F67C4F /* Pods_Fishing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fishing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996E2F99C33CFF211BD556A4 /* Pods-Fishing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishing.debug.xcconfig"; path = "Target Support Files/Pods-Fishing/Pods-Fishing.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +56,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044070742577FA980055FC2A /* views */ = {
+			isa = PBXGroup;
+			children = (
+				044470C1252398A600F96D43 /* PlusButtonCell.swift */,
+				044470BE2523989400F96D43 /* ImageCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		044070752577FAAB0055FC2A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				044697D6255C4E64006F6F72 /* ImagePicker.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		044070762577FAB90055FC2A /* commonviews */ = {
+			isa = PBXGroup;
+			children = (
+				044070772577FAF70055FC2A /* TextFieldWithDataPicker.swift */,
+			);
+			path = commonviews;
+			sourceTree = "<group>";
+		};
 		044407E124CF35F1005072D0 = {
 			isa = PBXGroup;
 			children = (
@@ -74,19 +103,52 @@
 			isa = PBXGroup;
 			children = (
 				044407ED24CF35F1005072D0 /* AppDelegate.swift */,
-				044697D6255C4E64006F6F72 /* ImagePicker.swift */,
-				044407F124CF35F1005072D0 /* ViewController.swift */,
-				0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */,
-				04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */,
-				044407F624CF35F2005072D0 /* Assets.xcassets */,
-				04A1E22C251BC591003A537B /* LaunchScreen.storyboard */,
-				0449830924DAA10100DFB433 /* Main.storyboard */,
+				044070762577FAB90055FC2A /* commonviews */,
+				0446C7BD2576C7EA0010C2C3 /* HomePage */,
+				0446C7C12576CA200010C2C3 /* AddInformation */,
+				0446C7C22576CB460010C2C3 /* UpdateInformation */,
+				044070752577FAAB0055FC2A /* utils */,
+				0446C7C42576DC010010C2C3 /* Storyboard */,
 				0449C6432506C060002FFA48 /* Model.xcdatamodeld */,
 				044407FB24CF35F2005072D0 /* Info.plist */,
-				044470BE2523989400F96D43 /* ImageCell.swift */,
-				044470C1252398A600F96D43 /* PlusButtonCell.swift */,
+				0470685525ACD15700CC6E09 /* Assets.xcassets */,
 			);
 			path = Fishing;
+			sourceTree = "<group>";
+		};
+		0446C7BD2576C7EA0010C2C3 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				044407F124CF35F1005072D0 /* ViewController.swift */,
+				0440707A25780ACA0055FC2A /* Presenter.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		0446C7C12576CA200010C2C3 /* AddInformation */ = {
+			isa = PBXGroup;
+			children = (
+				044070742577FA980055FC2A /* views */,
+				0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */,
+			);
+			path = AddInformation;
+			sourceTree = "<group>";
+		};
+		0446C7C22576CB460010C2C3 /* UpdateInformation */ = {
+			isa = PBXGroup;
+			children = (
+				04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */,
+			);
+			path = UpdateInformation;
+			sourceTree = "<group>";
+		};
+		0446C7C42576DC010010C2C3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0449830924DAA10100DFB433 /* Main.storyboard */,
+				04A1E22C251BC591003A537B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		4C39EF78D486C3A7584C0488 /* Frameworks */ = {
@@ -168,8 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A1E22D251BC591003A537B /* LaunchScreen.storyboard in Resources */,
+				0470685625ACD15700CC6E09 /* Assets.xcassets in Resources */,
 				0449830A24DAA10100DFB433 /* Main.storyboard in Resources */,
-				044407F724CF35F2005072D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,10 +306,12 @@
 				0449830824DA6D1800DFB433 /* CreateFishingViewController.swift in Sources */,
 				0449C6492506C333002FFA48 /* Model.xcdatamodeld in Sources */,
 				044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */,
+				0440707B25780ACA0055FC2A /* Presenter.swift in Sources */,
 				04420BF6250821D8006AE7AA /* FishingDetailViewController.swift in Sources */,
 				044697D7255C4E64006F6F72 /* ImagePicker.swift in Sources */,
 				044470BF2523989400F96D43 /* ImageCell.swift in Sources */,
 				044470C2252398A600F96D43 /* PlusButtonCell.swift in Sources */,
+				044070782577FAF70055FC2A /* TextFieldWithDataPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
