@@ -10,12 +10,13 @@ import UIKit
 import CoreData
 
 class FishingDetailViewController: UIViewController {
-    //dateTextField
-    //txtDate
+    
     @IBOutlet private weak var fishingData: UITextField!
     @IBOutlet private weak var fishingName: UITextField!
     @IBOutlet private weak var fishingNote: UITextView!
     @IBOutlet private weak var fishingImage: UIImageView!
+    
+    @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet private weak var sliderCollectionView: UICollectionView!
     
     var fish: FishingInfo?
@@ -29,6 +30,7 @@ class FishingDetailViewController: UIViewController {
         
         fishingName.text = fish?.title
         fishingNote.text = fish?.notes
+        addressTextField.text = fish?.address
         guard let data = fish?.photo else {return}
         guard let loadedImage = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [Data] else {return}
         images = loadedImage.compactMap({ UIImage(data: $0) })

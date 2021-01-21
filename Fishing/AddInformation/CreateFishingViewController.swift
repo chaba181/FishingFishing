@@ -7,7 +7,8 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var dateTxt: TextFieldWithDataPicker!
     @IBOutlet private weak var collectionVIew: UICollectionView!
-   
+    @IBOutlet private weak var addressText: UITextField!
+    
     var date: Date?
     var imagePicker = ImagePicker()
     var openPhoto = ImageCell()
@@ -57,9 +58,9 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         }
         guard let photoObject = try? NSKeyedArchiver.archivedData(withRootObject: photo1, requiringSecureCoding: false) else {return}
             imageData = photoObject
-        guard let name = titleTextField.text, let data = dateTxt.text, let note = noteTxt.text else {return}
+        guard let name = titleTextField.text, let data = dateTxt.text, let note = noteTxt.text, let address = addressText.text else {return}
             #warning("название метода странное")
-            let addInfo = self.saveName(name: name, data: data, note: note, photo: imageData)
+            let addInfo = self.saveName(name: name, data: data, note: note, photo: imageData, address: address)
             if let addInfo = addInfo {
                 onDataAdded?(addInfo)
                 navigationController?.popViewController(animated: true)
@@ -67,7 +68,7 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         }
         }
     
-    func saveName (name: String, data: String, note: String, photo: Data) -> FishingInfo? {
+    func saveName (name: String, data: String, note: String, photo: Data, address: String) -> FishingInfo? {
         if dateTxt.text?.isEmpty == true && titleTextField.text?.isEmpty == true {
             #warning("Строки в локализацию")
             alert()
@@ -82,6 +83,7 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
             fish.setValue(data, forKey: "timeData")
             fish.setValue(note, forKey: "notes")
             fish.setValue(photo, forKey: "photo")
+            fish.setValue(address, forKey: "address")
             fish.setValue("\(Date().timeIntervalSince1970)", forKey: "id")
                         
             do {
