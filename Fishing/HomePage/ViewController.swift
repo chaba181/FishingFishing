@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         
         tbldViewData.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
         tbldViewData.delegate = self
+        tbldViewData.estimatedRowHeight = 38
+        tbldViewData.rowHeight = UITableView.automaticDimension
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,8 +104,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                let loadedImage = try?  NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [Data] {
                 let images = loadedImage.compactMap({ UIImage(data: $0) })
                  image = images.first
+                
             }
-            
+
             let activityConteoller = UIActivityViewController(activityItems: [defaultText , image as Any], applicationActivities: nil)
             self.present(activityConteoller, animated: true, completion: nil)
         }
@@ -116,8 +119,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             }
         }
         let action = UISwipeActionsConfiguration(actions: [delete, share])
-        share.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-        delete.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        delete.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+        delete.image = UIImage(named: "delete")
+        
+        share.backgroundColor = UIColor(red: 254.0/255.0, green: 149.0/255.0, blue: 38.0/255.0, alpha: 1.0)
+        share.image = UIImage(named: "share")
+       
         return action
     }
 }

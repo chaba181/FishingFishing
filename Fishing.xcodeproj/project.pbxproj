@@ -11,16 +11,21 @@
 		0440707B25780ACA0055FC2A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440707A25780ACA0055FC2A /* Presenter.swift */; };
 		04407F2B25B6080B0060C4BD /* FishingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04407F2A25B6080B0060C4BD /* FishingTableViewCell.swift */; };
 		04420BF6250821D8006AE7AA /* FishingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */; };
+		0442FFB925BF5050006C7CDF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FFB825BF5050006C7CDF /* MapViewController.swift */; };
+		0442FFBC25BF5138006C7CDF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0442FFBB25BF5138006C7CDF /* MapKit.framework */; };
+		0444018025BA21A700837B1A /* FishingDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444017F25BA21A700837B1A /* FishingDetailTableViewCell.swift */; };
 		044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407ED24CF35F1005072D0 /* AppDelegate.swift */; };
 		044407F224CF35F1005072D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407F124CF35F1005072D0 /* ViewController.swift */; };
 		044470BF2523989400F96D43 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044470BE2523989400F96D43 /* ImageCell.swift */; };
 		044470C2252398A600F96D43 /* PlusButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044470C1252398A600F96D43 /* PlusButtonCell.swift */; };
 		044697D7255C4E64006F6F72 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044697D6255C4E64006F6F72 /* ImagePicker.swift */; };
 		0449830824DA6D1800DFB433 /* CreateFishingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */; };
-		0449830A24DAA10100DFB433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0449830924DAA10100DFB433 /* Main.storyboard */; };
 		0449C6492506C333002FFA48 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0449C6432506C060002FFA48 /* Model.xcdatamodeld */; };
+		044DABAE25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DABAD25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift */; };
+		044DABB225BCCC6800ED0585 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DABB125BCCC6800ED0585 /* RateViewController.swift */; };
 		0470685625ACD15700CC6E09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0470685525ACD15700CC6E09 /* Assets.xcassets */; };
 		04A1E22D251BC591003A537B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A1E22C251BC591003A537B /* LaunchScreen.storyboard */; };
+		04EE667825BB665D009C4026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE667725BB665D009C4026 /* Main.storyboard */; };
 		A062D2EE0406C3E0B3BAA989 /* Pods_Fishing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D216474F2CF4FFB56F67C4F /* Pods_Fishing.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +34,9 @@
 		0440707A25780ACA0055FC2A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		04407F2A25B6080B0060C4BD /* FishingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingTableViewCell.swift; sourceTree = "<group>"; };
 		04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingDetailViewController.swift; sourceTree = "<group>"; };
+		0442FFB825BF5050006C7CDF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0442FFBB25BF5138006C7CDF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0444017F25BA21A700837B1A /* FishingDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingDetailTableViewCell.swift; sourceTree = "<group>"; };
 		044407EA24CF35F1005072D0 /* Fishing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fishing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044407ED24CF35F1005072D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044407F124CF35F1005072D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,10 +45,12 @@
 		044470C1252398A600F96D43 /* PlusButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButtonCell.swift; sourceTree = "<group>"; };
 		044697D6255C4E64006F6F72 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFishingViewController.swift; sourceTree = "<group>"; };
-		0449830924DAA10100DFB433 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0449C6442506C060002FFA48 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		044DABAD25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		044DABB125BCCC6800ED0585 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		0470685525ACD15700CC6E09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Assets.xcassets"; sourceTree = "<group>"; };
 		04A1E22C251BC591003A537B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04EE667725BB665D009C4026 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1D216474F2CF4FFB56F67C4F /* Pods_Fishing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fishing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		996E2F99C33CFF211BD556A4 /* Pods-Fishing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishing.debug.xcconfig"; path = "Target Support Files/Pods-Fishing/Pods-Fishing.debug.xcconfig"; sourceTree = "<group>"; };
 		E7E7C28B425DF34C4BE5D019 /* Pods-Fishing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fishing.release.xcconfig"; path = "Target Support Files/Pods-Fishing/Pods-Fishing.release.xcconfig"; sourceTree = "<group>"; };
@@ -51,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0442FFBC25BF5138006C7CDF /* MapKit.framework in Frameworks */,
 				A062D2EE0406C3E0B3BAA989 /* Pods_Fishing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */,
+				0444017F25BA21A700837B1A /* FishingDetailTableViewCell.swift */,
+				044DABAD25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift */,
 			);
 			path = UpdateInformation;
 			sourceTree = "<group>";
@@ -148,7 +161,9 @@
 		0446C7C42576DC010010C2C3 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				0449830924DAA10100DFB433 /* Main.storyboard */,
+				044DABB125BCCC6800ED0585 /* RateViewController.swift */,
+				0442FFB825BF5050006C7CDF /* MapViewController.swift */,
+				04EE667725BB665D009C4026 /* Main.storyboard */,
 				04A1E22C251BC591003A537B /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -157,6 +172,7 @@
 		4C39EF78D486C3A7584C0488 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0442FFBB25BF5138006C7CDF /* MapKit.framework */,
 				1D216474F2CF4FFB56F67C4F /* Pods_Fishing.framework */,
 			);
 			name = Frameworks;
@@ -232,9 +248,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EE667825BB665D009C4026 /* Main.storyboard in Resources */,
 				04A1E22D251BC591003A537B /* LaunchScreen.storyboard in Resources */,
 				0470685625ACD15700CC6E09 /* Assets.xcassets in Resources */,
-				0449830A24DAA10100DFB433 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,16 +321,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044DABAE25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift in Sources */,
 				044407F224CF35F1005072D0 /* ViewController.swift in Sources */,
 				0449830824DA6D1800DFB433 /* CreateFishingViewController.swift in Sources */,
 				0449C6492506C333002FFA48 /* Model.xcdatamodeld in Sources */,
 				044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */,
 				0440707B25780ACA0055FC2A /* Presenter.swift in Sources */,
+				044DABB225BCCC6800ED0585 /* RateViewController.swift in Sources */,
 				04420BF6250821D8006AE7AA /* FishingDetailViewController.swift in Sources */,
+				0444018025BA21A700837B1A /* FishingDetailTableViewCell.swift in Sources */,
 				04407F2B25B6080B0060C4BD /* FishingTableViewCell.swift in Sources */,
 				044697D7255C4E64006F6F72 /* ImagePicker.swift in Sources */,
 				044470BF2523989400F96D43 /* ImageCell.swift in Sources */,
 				044470C2252398A600F96D43 /* PlusButtonCell.swift in Sources */,
+				0442FFB925BF5050006C7CDF /* MapViewController.swift in Sources */,
 				044070782577FAF70055FC2A /* TextFieldWithDataPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
