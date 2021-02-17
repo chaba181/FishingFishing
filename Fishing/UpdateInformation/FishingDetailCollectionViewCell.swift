@@ -10,6 +10,9 @@ import UIKit
 
 class FishingDetailCollectionViewCell: UICollectionViewCell {
     
+    var showMap: (() -> Void)?
+    var showRate: (() -> Void)?
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var rateButton: UIButton! {
         didSet {
@@ -28,4 +31,11 @@ class FishingDetailCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    @IBAction func mapButtinAction(_ sender: Any) {
+        showMap?()
+    }
+    
+    @IBAction func rateButtonAction(_ sender: Any) {
+        showRate?()
+    }
 }

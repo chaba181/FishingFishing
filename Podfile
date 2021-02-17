@@ -9,5 +9,8 @@ target 'Fishing' do
   pod 'SwiftLint'
   pod 'FSCalendar'
   pod 'IQKeyboardManagerSwift', '6.3.0'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'NVActivityIndicatorView'
+
 
 end

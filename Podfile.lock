@@ -2,27 +2,37 @@ PODS:
   - Alamofire (5.2.2)
   - FSCalendar (2.8.1)
   - IQKeyboardManagerSwift (6.3.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - SwiftLint (0.39.2)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - Alamofire
   - FSCalendar
   - IQKeyboardManagerSwift (= 6.3.0)
+  - NVActivityIndicatorView
   - SwiftLint
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - FSCalendar
     - IQKeyboardManagerSwift
+    - NVActivityIndicatorView
     - SwiftLint
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: aebefd1b3bf96a17b7d460c5c538757b43dadb9d
+PODFILE CHECKSUM: 7b3aab731b6b7addde29ab5b715e8d5af72396b7
 
 COCOAPODS: 1.9.3

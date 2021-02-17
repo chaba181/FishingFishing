@@ -3,6 +3,8 @@ import CoreData
 
 class CreateFishingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    // MARK: - Properties
+    
     @IBOutlet private weak var noteTxt: UITextView!
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var dateTxt: TextFieldWithDataPicker!
@@ -17,10 +19,12 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
     
     var onDataAdded: ((FishingInfo) -> Void)?
     var isEdit: Bool = false
-
+    
     var images: [UIImage] = [] {
         didSet { collectionVIew.reloadData() }
     }
+    
+    // MARK: - CreateFishingViewController life cycle
     
     override func viewDidLoad() {
         
@@ -28,10 +32,10 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         
         collectionVIew.delegate = self
         collectionVIew.dataSource = self
-        #warning("Разберись с memory maangment, retain cycle и зачем здесь нужен weak self")
+
         imagePicker.didImagePick = { [weak self] in
             self?.images.append($0)
-         
+            
         }
         imagePicker.didPickingCancel = { [weak self] in
             self?.showCanceledAllert()
@@ -57,16 +61,16 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
             photo1.add(data)
         }
         guard let photoObject = try? NSKeyedArchiver.archivedData(withRootObject: photo1, requiringSecureCoding: false) else {return}
-            imageData = photoObject
+        imageData = photoObject
         guard let name = titleTextField.text, let data = dateTxt.text, let note = noteTxt.text, let address = addressText.text else {return}
-            #warning("название метода странное")
-            let addInfo = self.saveName(name: name, data: data, note: note, photo: imageData, address: address)
-            if let addInfo = addInfo {
-                onDataAdded?(addInfo)
-                navigationController?.popViewController(animated: true)
-                
+        #warning("название метода странное")
+        let addInfo = self.saveName(name: name, data: data, note: note, photo: imageData, address: address)
+        if let addInfo = addInfo {
+            onDataAdded?(addInfo)
+            navigationController?.popViewController(animated: true)
+            
         }
-        }
+    }
     
     func saveName (name: String, data: String, note: String, photo: Data, address: String) -> FishingInfo? {
         if dateTxt.text?.isEmpty == true && titleTextField.text?.isEmpty == true {
@@ -79,24 +83,19 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
             let fish = FishingInfo(entity: FishingInfo.entity(), insertInto: context)
             
             #warning("Вынеси все ключи в отдельный клас FishingInfoKeys и обращайся к ним только оттуда в идеале вообще сделай extension к FisingInfo + вынеси это в отедльный метод")
+            //fish.notes = note
             fish.setValue(name, forKey: "title")
             fish.setValue(data, forKey: "timeData")
             fish.setValue(note, forKey: "notes")
             fish.setValue(photo, forKey: "photo")
             fish.setValue(address, forKey: "address")
             fish.setValue("\(Date().timeIntervalSince1970)", forKey: "id")
-                        
-            do {
-                try context.save()
-                return fish
-            } catch let error as NSError {
-                print("Could not save \(error) , \(error.userInfo)")
-                return nil
-            }
+            
+            guard (try? context.save()) != nil else {return nil}
+            return fish
         }
     }
     
-    #warning("убери do cathc")
     func showCanceledAllert() {
         alertForphoto()
     }
@@ -137,12 +136,15 @@ extension CreateFishingViewController: UICollectionViewDataSource, UICollectionV
         return 8
     }
 }
+
+// MARK: - UIAllertController
+
 extension CreateFishingViewController {
     func alert () {
-    let action = UIAlertController(title: "Внимание!", message: "Поле Дата и Название должны быть заполнены", preferredStyle: .alert)
-    action.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
-    }))
-    self.present(action, animated: true, completion: nil)
+        let action = UIAlertController(title: "Внимание!", message: "Поле Дата и Название должны быть заполнены", preferredStyle: .alert)
+        action.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
+        }))
+        self.present(action, animated: true, completion: nil)
         
     }
     func alertForphoto () {
@@ -152,6 +154,8 @@ extension CreateFishingViewController {
     }
     
 }
+// MARK: - hideKeyboardWhenTappedaround
+
 extension UIViewController {
     func hideKeyboardWhenTappedaround() {
         let taps = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dissmissKeyboard))

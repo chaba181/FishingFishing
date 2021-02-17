@@ -10,11 +10,14 @@ import UIKit
 
 class RateViewController: UIViewController {
 
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var rateStackView: UIStackView!
     @IBOutlet weak var sadButton: UIButton!
     @IBOutlet weak var goodButton: UIButton!
     @IBOutlet weak var amazingButton: UIButton!
     var fishRating: String?
+    
+    var onRatingChosen: ((String?) -> Void)?
     
     @IBAction func rateFishing (sender: UIButton) {
         switch sender.tag {
@@ -23,7 +26,8 @@ class RateViewController: UIViewController {
         case 2: fishRating = "brilliant"
         default: break
         }
-        performSegue(withIdentifier: "unwidSegueToDVC", sender: sender)
+        onRatingChosen?(fishRating)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,10 +43,25 @@ class RateViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        transform()
+        blurEffect()
+        
+    }
+    
+    func blurEffect () {
+        let blur = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = self.view.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.insertSubview(blurView, at: 1)
+        
+    }
+    
+    func transform () {
         sadButton.transform = CGAffineTransform.init(scaleX: 0, y: 0)
         goodButton.transform = CGAffineTransform.init(scaleX: 0, y: 0)
         amazingButton.transform = CGAffineTransform.init(scaleX: 0, y: 0)
-        // Do any additional setup after loading the view.
     }
     
 }

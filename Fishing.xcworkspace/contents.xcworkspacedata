@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/mac/Desktop/Fishing-App/Fishing/WeatherViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:Fishing.xcodeproj">
    </FileRef>
    <FileRef
