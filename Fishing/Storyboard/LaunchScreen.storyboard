@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="0q6-cb-ioY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laun" translatesAutoresizingMaskIntoConstraints="NO" id="0q6-cb-ioY">
                                 <rect key="frame" x="135.5" y="387" width="143" height="132"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="Nze-UM-rxo"/>
@@ -39,6 +39,6 @@
     </scenes>
     <color key="tintColor" red="0.58279097540000002" green="0.83968709689999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="logo2" width="886" height="886"/>
+        <image name="laun" width="64" height="64"/>
     </resources>
 </document>

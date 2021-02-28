@@ -14,7 +14,6 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
     var imageView: UIImageView?
     var didImagePick: ((UIImage) -> Void)?
     var didPickingCancel: (() -> Void)?
-    var cropImage: ((UIImage) -> Void)?
     
     override init() {
         imagePickerController  = UIImagePickerController()
@@ -60,5 +59,5 @@ class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationContro
         didPickingCancel?()
         
     }
-
+    
 }

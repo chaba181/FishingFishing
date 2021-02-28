@@ -31,7 +31,7 @@ class FishingDetailCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    @IBAction func mapButtinAction(_ sender: Any) {
+    @IBAction func mapButtonAction(_ sender: Any) {
         showMap?()
     }
     
@@ -39,3 +39,8 @@ class FishingDetailCollectionViewCell: UICollectionViewCell {
         showRate?()
     }
 }
+#warning("Тебе туту еще надо будет почитать на каком метод подписаться для того чтобы pagecontroll правильно менялся")
+
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+//    }

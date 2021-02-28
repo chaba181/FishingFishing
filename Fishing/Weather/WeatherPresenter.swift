@@ -9,16 +9,31 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import CoreLocation
 
 protocol WeatherPresenterOutput: class {
     func startAnimating ()
     func stopAnimating()
     func setUpWitheCurrentWeather(currentWeather: CurrentWeather)
-    func setLocation()
 }
 
-class WeatherPresenter: WeatherViewControllerOutput {
+class WeatherPresenter: NSObject, WeatherViewControllerOutput, CLLocationManagerDelegate {
+
     weak var ouput: WeatherPresenterOutput?
+    
+    var lotitide = 123.14
+    var longitude = 14444.45
+    let locationManager: CLLocationManager!
+    
+    override init() {
+        locationManager = CLLocationManager()
+        super.init()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        }
+    }
     
     func loadCurrentWeather(latitude: Double, longitude: Double ) {
         ouput?.startAnimating()
@@ -35,5 +50,17 @@ class WeatherPresenter: WeatherViewControllerOutput {
             case .failure: break
             }
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        let lotitide = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
+        loadCurrentWeather(latitude: lotitide, longitude: longitude)
+        
+    }
+    
+    func start() {
+        locationManager.startUpdatingLocation()
     }
 }

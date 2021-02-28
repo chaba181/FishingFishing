@@ -21,7 +21,7 @@ class Presenter: NSObject {
     func loadData() {
         guard   let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext,
                 let result = try? context.fetch(FishingInfo.fetchRequest()) as? [FishingInfo] else { return }
-            
+        
         info = result
     }
 }

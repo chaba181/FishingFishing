@@ -8,10 +8,13 @@
 
 import UIKit
 import MapKit
-class MapViewController: UIViewController, MKMapViewDelegate {
 
-    @IBOutlet weak var mapView: MKMapView!
+class MapViewController: UIViewController, MKMapViewDelegate {
+    
+    @IBOutlet private weak var mapView: MKMapView!
+    
     var fish: FishingInfo?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,5 +55,5 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         annotationView?.rightCalloutAccessoryView = rightImage
         return annotationView
     }
-
+    
 }

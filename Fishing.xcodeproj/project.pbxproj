@@ -10,25 +10,29 @@
 		044070782577FAF70055FC2A /* TextFieldWithDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044070772577FAF70055FC2A /* TextFieldWithDataPicker.swift */; };
 		0440707B25780ACA0055FC2A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440707A25780ACA0055FC2A /* Presenter.swift */; };
 		04407F2B25B6080B0060C4BD /* FishingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04407F2A25B6080B0060C4BD /* FishingTableViewCell.swift */; };
+		0441730725DF077C00508885 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441730625DF077C00508885 /* CoreDataManager.swift */; };
 		04420BF6250821D8006AE7AA /* FishingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */; };
 		0442FFB925BF5050006C7CDF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FFB825BF5050006C7CDF /* MapViewController.swift */; };
 		0442FFBC25BF5138006C7CDF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0442FFBB25BF5138006C7CDF /* MapKit.framework */; };
 		0444018025BA21A700837B1A /* FishingDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444017F25BA21A700837B1A /* FishingDetailTableViewCell.swift */; };
 		044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407ED24CF35F1005072D0 /* AppDelegate.swift */; };
 		044407F224CF35F1005072D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407F124CF35F1005072D0 /* ViewController.swift */; };
+		04442ED925E59168005BA37B /* WeatherViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04442ED825E59168005BA37B /* WeatherViewController 2.swift */; };
+		04442EDE25E5A735005BA37B /* ExtansionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04442EDD25E5A735005BA37B /* ExtansionColor.swift */; };
 		044470BF2523989400F96D43 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044470BE2523989400F96D43 /* ImageCell.swift */; };
 		044470C2252398A600F96D43 /* PlusButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044470C1252398A600F96D43 /* PlusButtonCell.swift */; };
-		0445EE0125D5BC5600F20476 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445EE0025D5BC5600F20476 /* WeatherViewController.swift */; };
 		0445EE0525D5BD4900F20476 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445EE0425D5BD4900F20476 /* CurrentWeather.swift */; };
 		0445EE1925D5C47000F20476 /* Assets 2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0445EE1825D5C47000F20476 /* Assets 2.xcassets */; };
 		044697D7255C4E64006F6F72 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044697D6255C4E64006F6F72 /* ImagePicker.swift */; };
-		0448B32F25C321E8003AC4FA /* TipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448B32E25C321E8003AC4FA /* TipsTableViewController.swift */; };
-		0448B33425C322B5003AC4FA /* TipsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448B33325C322B5003AC4FA /* TipsTableViewCell.swift */; };
-		0448B36625C345CA003AC4FA /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448B36525C345CA003AC4FA /* TipsViewController.swift */; };
 		0449262B25DC40B40085EE97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449262A25DC40B40085EE97 /* Constants.swift */; };
 		0449262E25DC41C10085EE97 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449262D25DC41C10085EE97 /* WeatherPresenter.swift */; };
 		0449830824DA6D1800DFB433 /* CreateFishingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */; };
 		0449C6492506C333002FFA48 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0449C6432506C060002FFA48 /* Model.xcdatamodeld */; };
+		044D444F25E4423A00231D62 /* ExtensionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D444E25E4423A00231D62 /* ExtensionTableView.swift */; };
+		044D445425E4459C00231D62 /* ExtansionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D445325E4459C00231D62 /* ExtansionCollectionView.swift */; };
+		044D445725E446C300231D62 /* ExtansionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D445625E446C300231D62 /* ExtansionAlert.swift */; };
+		044D445B25E4474800231D62 /* ExtansionHideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D445A25E4474800231D62 /* ExtansionHideKeyboard.swift */; };
+		044D446525E44DB300231D62 /* DateFormatterSingltone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D446425E44DB300231D62 /* DateFormatterSingltone.swift */; };
 		044DABAE25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DABAD25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift */; };
 		044DABB225BCCC6800ED0585 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DABB125BCCC6800ED0585 /* RateViewController.swift */; };
 		04A1E22D251BC591003A537B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A1E22C251BC591003A537B /* LaunchScreen.storyboard */; };
@@ -40,6 +44,7 @@
 		044070772577FAF70055FC2A /* TextFieldWithDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDataPicker.swift; sourceTree = "<group>"; };
 		0440707A25780ACA0055FC2A /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		04407F2A25B6080B0060C4BD /* FishingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingTableViewCell.swift; sourceTree = "<group>"; };
+		0441730625DF077C00508885 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingDetailViewController.swift; sourceTree = "<group>"; };
 		0442FFB825BF5050006C7CDF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0442FFBB25BF5138006C7CDF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -48,19 +53,22 @@
 		044407ED24CF35F1005072D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044407F124CF35F1005072D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		044407FB24CF35F2005072D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04442ED825E59168005BA37B /* WeatherViewController 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WeatherViewController 2.swift"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/WeatherViewController 2.swift"; sourceTree = "<group>"; };
+		04442EDD25E5A735005BA37B /* ExtansionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtansionColor.swift; sourceTree = "<group>"; };
 		044470BE2523989400F96D43 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		044470C1252398A600F96D43 /* PlusButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButtonCell.swift; sourceTree = "<group>"; };
-		0445EE0025D5BC5600F20476 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherViewController.swift; path = "/Users/mac/Desktop/Fishing-App/Fishing/WeatherViewController.swift"; sourceTree = "<absolute>"; };
 		0445EE0425D5BD4900F20476 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		0445EE1825D5C47000F20476 /* Assets 2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Assets 2.xcassets"; path = "../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Assets 2.xcassets"; sourceTree = "<group>"; };
 		044697D6255C4E64006F6F72 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		0448B32E25C321E8003AC4FA /* TipsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTableViewController.swift; sourceTree = "<group>"; };
-		0448B33325C322B5003AC4FA /* TipsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTableViewCell.swift; sourceTree = "<group>"; };
-		0448B36525C345CA003AC4FA /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		0449262A25DC40B40085EE97 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0449262D25DC41C10085EE97 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
 		0449830724DA6D1800DFB433 /* CreateFishingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFishingViewController.swift; sourceTree = "<group>"; };
 		0449C6442506C060002FFA48 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		044D444E25E4423A00231D62 /* ExtensionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTableView.swift; sourceTree = "<group>"; };
+		044D445325E4459C00231D62 /* ExtansionCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtansionCollectionView.swift; sourceTree = "<group>"; };
+		044D445625E446C300231D62 /* ExtansionAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtansionAlert.swift; sourceTree = "<group>"; };
+		044D445A25E4474800231D62 /* ExtansionHideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtansionHideKeyboard.swift; sourceTree = "<group>"; };
+		044D446425E44DB300231D62 /* DateFormatterSingltone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterSingltone.swift; sourceTree = "<group>"; };
 		044DABAD25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		044DABB125BCCC6800ED0585 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		04A1E22C251BC591003A537B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,9 +96,6 @@
 			children = (
 				044470C1252398A600F96D43 /* PlusButtonCell.swift */,
 				044470BE2523989400F96D43 /* ImageCell.swift */,
-				04407F2A25B6080B0060C4BD /* FishingTableViewCell.swift */,
-				044DABB125BCCC6800ED0585 /* RateViewController.swift */,
-				0442FFB825BF5050006C7CDF /* MapViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -111,9 +116,20 @@
 			path = commonviews;
 			sourceTree = "<group>";
 		};
+		0441730925DF078900508885 /* Singltone */ = {
+			isa = PBXGroup;
+			children = (
+				0441730625DF077C00508885 /* CoreDataManager.swift */,
+				044D446425E44DB300231D62 /* DateFormatterSingltone.swift */,
+			);
+			path = Singltone;
+			sourceTree = "<group>";
+		};
 		044407E124CF35F1005072D0 = {
 			isa = PBXGroup;
 			children = (
+				044D444D25E441C800231D62 /* Extension */,
+				0441730925DF078900508885 /* Singltone */,
 				044407EC24CF35F1005072D0 /* Fishing */,
 				0445EE1825D5C47000F20476 /* Assets 2.xcassets */,
 				044407EB24CF35F1005072D0 /* Products */,
@@ -139,7 +155,6 @@
 				0446C7BD2576C7EA0010C2C3 /* HomePage */,
 				0446C7C12576CA200010C2C3 /* AddInformation */,
 				0446C7C22576CB460010C2C3 /* UpdateInformation */,
-				0448B33125C321F1003AC4FA /* TipsForFishermen */,
 				0445EE0325D5BC5B00F20476 /* Weather */,
 				044070752577FAAB0055FC2A /* utils */,
 				0449C6432506C060002FFA48 /* Model.xcdatamodeld */,
@@ -151,10 +166,10 @@
 		0445EE0325D5BC5B00F20476 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				0445EE0025D5BC5600F20476 /* WeatherViewController.swift */,
-				0449262A25DC40B40085EE97 /* Constants.swift */,
+				04442ED825E59168005BA37B /* WeatherViewController 2.swift */,
 				0449262D25DC41C10085EE97 /* WeatherPresenter.swift */,
 				0445EE0425D5BD4900F20476 /* CurrentWeather.swift */,
+				0449262A25DC40B40085EE97 /* Constants.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -164,6 +179,7 @@
 			children = (
 				044407F124CF35F1005072D0 /* ViewController.swift */,
 				0440707A25780ACA0055FC2A /* Presenter.swift */,
+				04407F2A25B6080B0060C4BD /* FishingTableViewCell.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -180,6 +196,8 @@
 		0446C7C22576CB460010C2C3 /* UpdateInformation */ = {
 			isa = PBXGroup;
 			children = (
+				0442FFB825BF5050006C7CDF /* MapViewController.swift */,
+				044DABB125BCCC6800ED0585 /* RateViewController.swift */,
 				04420BF5250821D8006AE7AA /* FishingDetailViewController.swift */,
 				0444017F25BA21A700837B1A /* FishingDetailTableViewCell.swift */,
 				044DABAD25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift */,
@@ -196,14 +214,16 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		0448B33125C321F1003AC4FA /* TipsForFishermen */ = {
+		044D444D25E441C800231D62 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0448B36525C345CA003AC4FA /* TipsViewController.swift */,
-				0448B32E25C321E8003AC4FA /* TipsTableViewController.swift */,
-				0448B33325C322B5003AC4FA /* TipsTableViewCell.swift */,
+				044D444E25E4423A00231D62 /* ExtensionTableView.swift */,
+				044D445325E4459C00231D62 /* ExtansionCollectionView.swift */,
+				044D445625E446C300231D62 /* ExtansionAlert.swift */,
+				044D445A25E4474800231D62 /* ExtansionHideKeyboard.swift */,
+				04442EDD25E5A735005BA37B /* ExtansionColor.swift */,
 			);
-			path = TipsForFishermen;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		4C39EF78D486C3A7584C0488 /* Frameworks */ = {
@@ -359,14 +379,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0448B33425C322B5003AC4FA /* TipsTableViewCell.swift in Sources */,
+				044D445425E4459C00231D62 /* ExtansionCollectionView.swift in Sources */,
+				04442ED925E59168005BA37B /* WeatherViewController 2.swift in Sources */,
 				0449262E25DC41C10085EE97 /* WeatherPresenter.swift in Sources */,
 				044DABAE25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift in Sources */,
 				044407F224CF35F1005072D0 /* ViewController.swift in Sources */,
-				0448B32F25C321E8003AC4FA /* TipsTableViewController.swift in Sources */,
 				0449830824DA6D1800DFB433 /* CreateFishingViewController.swift in Sources */,
 				0449C6492506C333002FFA48 /* Model.xcdatamodeld in Sources */,
 				0445EE0525D5BD4900F20476 /* CurrentWeather.swift in Sources */,
+				0441730725DF077C00508885 /* CoreDataManager.swift in Sources */,
 				044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */,
 				0440707B25780ACA0055FC2A /* Presenter.swift in Sources */,
 				044DABB225BCCC6800ED0585 /* RateViewController.swift in Sources */,
@@ -374,10 +395,13 @@
 				0449262B25DC40B40085EE97 /* Constants.swift in Sources */,
 				0444018025BA21A700837B1A /* FishingDetailTableViewCell.swift in Sources */,
 				04407F2B25B6080B0060C4BD /* FishingTableViewCell.swift in Sources */,
+				044D445B25E4474800231D62 /* ExtansionHideKeyboard.swift in Sources */,
+				04442EDE25E5A735005BA37B /* ExtansionColor.swift in Sources */,
 				044697D7255C4E64006F6F72 /* ImagePicker.swift in Sources */,
+				044D445725E446C300231D62 /* ExtansionAlert.swift in Sources */,
 				044470BF2523989400F96D43 /* ImageCell.swift in Sources */,
-				0445EE0125D5BC5600F20476 /* WeatherViewController.swift in Sources */,
-				0448B36625C345CA003AC4FA /* TipsViewController.swift in Sources */,
+				044D444F25E4423A00231D62 /* ExtensionTableView.swift in Sources */,
+				044D446525E44DB300231D62 /* DateFormatterSingltone.swift in Sources */,
 				044470C2252398A600F96D43 /* PlusButtonCell.swift in Sources */,
 				0442FFB925BF5050006C7CDF /* MapViewController.swift in Sources */,
 				044070782577FAF70055FC2A /* TextFieldWithDataPicker.swift in Sources */,
@@ -391,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -438,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -452,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -493,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -513,6 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PUHQR75ZP;
 				INFOPLIST_FILE = Fishing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,7 +549,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -536,6 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PUHQR75ZP;
 				INFOPLIST_FILE = Fishing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -545,7 +573,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

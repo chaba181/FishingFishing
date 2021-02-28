@@ -12,7 +12,7 @@ class TextFieldWithDataPicker: UITextField {
     
     var onDonePressed: (() -> Void)?
     var onTextChanged: ((Date) -> Void)?
-        
+    
     var date: Date? {
         datePicker?.date
     }
@@ -33,8 +33,7 @@ class TextFieldWithDataPicker: UITextField {
     
     private func setup() {
         self.textAlignment = .center
-        let datePicker = UIDatePicker()
-        datePicker.preferredDatePickerStyle = .wheels
+        let datePicker = DateFormatterSingltone.sharedFormat.setupFormat()
         datePicker.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -52,10 +51,7 @@ class TextFieldWithDataPicker: UITextField {
     }
     
     @objc private func dateChanged() {
-        #warning("Сделай отдельный класс DateHelper который будет синглтоном и будет уметь работать с датой")
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
+        let formatter = DateFormatterSingltone.sharedFormat.format()
         guard let date = self.datePicker?.date else { return }
         self.text = formatter.string(from: date)
         onTextChanged?(date)

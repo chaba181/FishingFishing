@@ -10,15 +10,13 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet private weak var dateTxt: TextFieldWithDataPicker!
     @IBOutlet private weak var collectionVIew: UICollectionView!
     @IBOutlet private weak var addressText: UITextField!
-    
+    let date22 = NSDate()
     var date: Date?
     var imagePicker = ImagePicker()
-    var openPhoto = ImageCell()
     
     lazy var datePicker = UIDatePicker()
     
     var onDataAdded: ((FishingInfo) -> Void)?
-    var isEdit: Bool = false
     
     var images: [UIImage] = [] {
         didSet { collectionVIew.reloadData() }
@@ -30,9 +28,10 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         
         super.viewDidLoad()
         
+        dateTxt.text =  DateFormatterSingltone.sharedFormat.currentDate()
         collectionVIew.delegate = self
         collectionVIew.dataSource = self
-
+        
         imagePicker.didImagePick = { [weak self] in
             self?.images.append($0)
             
@@ -63,8 +62,7 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         guard let photoObject = try? NSKeyedArchiver.archivedData(withRootObject: photo1, requiringSecureCoding: false) else {return}
         imageData = photoObject
         guard let name = titleTextField.text, let data = dateTxt.text, let note = noteTxt.text, let address = addressText.text else {return}
-        #warning("название метода странное")
-        let addInfo = self.saveName(name: name, data: data, note: note, photo: imageData, address: address)
+        let addInfo = self.saveDataFishing(name: name, data: data, note: note, photo: imageData, address: address)
         if let addInfo = addInfo {
             onDataAdded?(addInfo)
             navigationController?.popViewController(animated: true)
@@ -72,8 +70,8 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
         }
     }
     
-    func saveName (name: String, data: String, note: String, photo: Data, address: String) -> FishingInfo? {
-        if dateTxt.text?.isEmpty == true && titleTextField.text?.isEmpty == true {
+    func saveDataFishing (name: String, data: String, note: String, photo: Data, address: String) -> FishingInfo? {
+        if dateTxt.text?.isEmpty == true || titleTextField.text?.isEmpty == true {
             #warning("Строки в локализацию")
             alert()
             return nil
@@ -98,71 +96,5 @@ class CreateFishingViewController: UIViewController, UIImagePickerControllerDele
     
     func showCanceledAllert() {
         alertForphoto()
-    }
-}
-
-// MARK: - UICollectionViewDataSource
-
-extension CreateFishingViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count + 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell
-        
-        if indexPath.row >= images.count || images.isEmpty {
-            let plusCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PlusButtonCell.self), for: indexPath)
-            cell = plusCell
-            
-            if let cell = cell as? PlusButtonCell {
-                cell.onAddButtonClick = { [unowned self] in
-                    self.imagePicker.pickImage(from: self)
-                }
-            }
-        } else {
-            let imageCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ImageCell.self), for: indexPath)
-            cell = imageCell
-            
-            if let cell = cell as? ImageCell {
-                cell.imageView.image = images[indexPath.row]
-            }
-        }
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
-    }
-}
-
-// MARK: - UIAllertController
-
-extension CreateFishingViewController {
-    func alert () {
-        let action = UIAlertController(title: "Внимание!", message: "Поле Дата и Название должны быть заполнены", preferredStyle: .alert)
-        action.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
-        }))
-        self.present(action, animated: true, completion: nil)
-        
-    }
-    func alertForphoto () {
-        let allert = UIAlertController(title: "Внимание", message: "Вы отменили выбор картинки", preferredStyle: .alert)
-        allert.addAction( UIAlertAction(title: "OK", style: .cancel, handler: { _ in }))
-        self.present(allert, animated: true, completion: nil)
-    }
-    
-}
-// MARK: - hideKeyboardWhenTappedaround
-
-extension UIViewController {
-    func hideKeyboardWhenTappedaround() {
-        let taps = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dissmissKeyboard))
-        taps.cancelsTouchesInView = false
-        view.addGestureRecognizer(taps)
-    }
-    @objc func dissmissKeyboard () {
-        view.endEditing(true)
     }
 }
