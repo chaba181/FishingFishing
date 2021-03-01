@@ -17,12 +17,10 @@
 		0444018025BA21A700837B1A /* FishingDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444017F25BA21A700837B1A /* FishingDetailTableViewCell.swift */; };
 		044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407ED24CF35F1005072D0 /* AppDelegate.swift */; };
 		044407F224CF35F1005072D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044407F124CF35F1005072D0 /* ViewController.swift */; };
-		04442ED925E59168005BA37B /* WeatherViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04442ED825E59168005BA37B /* WeatherViewController 2.swift */; };
 		04442EDE25E5A735005BA37B /* ExtansionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04442EDD25E5A735005BA37B /* ExtansionColor.swift */; };
 		044470BF2523989400F96D43 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044470BE2523989400F96D43 /* ImageCell.swift */; };
 		044470C2252398A600F96D43 /* PlusButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044470C1252398A600F96D43 /* PlusButtonCell.swift */; };
 		0445EE0525D5BD4900F20476 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0445EE0425D5BD4900F20476 /* CurrentWeather.swift */; };
-		0445EE1925D5C47000F20476 /* Assets 2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0445EE1825D5C47000F20476 /* Assets 2.xcassets */; };
 		044697D7255C4E64006F6F72 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044697D6255C4E64006F6F72 /* ImagePicker.swift */; };
 		0449262B25DC40B40085EE97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449262A25DC40B40085EE97 /* Constants.swift */; };
 		0449262E25DC41C10085EE97 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449262D25DC41C10085EE97 /* WeatherPresenter.swift */; };
@@ -35,6 +33,8 @@
 		044D446525E44DB300231D62 /* DateFormatterSingltone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D446425E44DB300231D62 /* DateFormatterSingltone.swift */; };
 		044DABAE25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DABAD25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift */; };
 		044DABB225BCCC6800ED0585 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DABB125BCCC6800ED0585 /* RateViewController.swift */; };
+		0453EAA325ECD78700F8BB00 /* WeatherViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453EAA225ECD78700F8BB00 /* WeatherViewController 2.swift */; };
+		0453EAA725ECE84200F8BB00 /* Assets 2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0453EAA625ECE84200F8BB00 /* Assets 2.xcassets */; };
 		04A1E22D251BC591003A537B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A1E22C251BC591003A537B /* LaunchScreen.storyboard */; };
 		04EE667825BB665D009C4026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EE667725BB665D009C4026 /* Main.storyboard */; };
 		A062D2EE0406C3E0B3BAA989 /* Pods_Fishing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D216474F2CF4FFB56F67C4F /* Pods_Fishing.framework */; };
@@ -53,12 +53,10 @@
 		044407ED24CF35F1005072D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044407F124CF35F1005072D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		044407FB24CF35F2005072D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04442ED825E59168005BA37B /* WeatherViewController 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WeatherViewController 2.swift"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/WeatherViewController 2.swift"; sourceTree = "<group>"; };
 		04442EDD25E5A735005BA37B /* ExtansionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtansionColor.swift; sourceTree = "<group>"; };
 		044470BE2523989400F96D43 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		044470C1252398A600F96D43 /* PlusButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButtonCell.swift; sourceTree = "<group>"; };
 		0445EE0425D5BD4900F20476 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
-		0445EE1825D5C47000F20476 /* Assets 2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Assets 2.xcassets"; path = "../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Assets 2.xcassets"; sourceTree = "<group>"; };
 		044697D6255C4E64006F6F72 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0449262A25DC40B40085EE97 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0449262D25DC41C10085EE97 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
@@ -71,6 +69,8 @@
 		044D446425E44DB300231D62 /* DateFormatterSingltone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterSingltone.swift; sourceTree = "<group>"; };
 		044DABAD25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		044DABB125BCCC6800ED0585 /* RateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
+		0453EAA225ECD78700F8BB00 /* WeatherViewController 2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WeatherViewController 2.swift"; sourceTree = "<group>"; };
+		0453EAA625ECE84200F8BB00 /* Assets 2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Assets 2.xcassets"; path = "Fishing/Assets 2.xcassets"; sourceTree = "<group>"; };
 		04A1E22C251BC591003A537B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04EE667725BB665D009C4026 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1D216474F2CF4FFB56F67C4F /* Pods_Fishing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fishing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +131,7 @@
 				044D444D25E441C800231D62 /* Extension */,
 				0441730925DF078900508885 /* Singltone */,
 				044407EC24CF35F1005072D0 /* Fishing */,
-				0445EE1825D5C47000F20476 /* Assets 2.xcassets */,
+				0453EAA625ECE84200F8BB00 /* Assets 2.xcassets */,
 				044407EB24CF35F1005072D0 /* Products */,
 				9F4654A9A1D9541BA4784529 /* Pods */,
 				4C39EF78D486C3A7584C0488 /* Frameworks */,
@@ -166,7 +166,7 @@
 		0445EE0325D5BC5B00F20476 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				04442ED825E59168005BA37B /* WeatherViewController 2.swift */,
+				0453EAA225ECD78700F8BB00 /* WeatherViewController 2.swift */,
 				0449262D25DC41C10085EE97 /* WeatherPresenter.swift */,
 				0445EE0425D5BD4900F20476 /* CurrentWeather.swift */,
 				0449262A25DC40B40085EE97 /* Constants.swift */,
@@ -307,7 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04EE667825BB665D009C4026 /* Main.storyboard in Resources */,
-				0445EE1925D5C47000F20476 /* Assets 2.xcassets in Resources */,
+				0453EAA725ECE84200F8BB00 /* Assets 2.xcassets in Resources */,
 				04A1E22D251BC591003A537B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,12 +380,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				044D445425E4459C00231D62 /* ExtansionCollectionView.swift in Sources */,
-				04442ED925E59168005BA37B /* WeatherViewController 2.swift in Sources */,
 				0449262E25DC41C10085EE97 /* WeatherPresenter.swift in Sources */,
 				044DABAE25BCC6B300ED0585 /* FishingDetailCollectionViewCell.swift in Sources */,
 				044407F224CF35F1005072D0 /* ViewController.swift in Sources */,
 				0449830824DA6D1800DFB433 /* CreateFishingViewController.swift in Sources */,
 				0449C6492506C333002FFA48 /* Model.xcdatamodeld in Sources */,
+				0453EAA325ECD78700F8BB00 /* WeatherViewController 2.swift in Sources */,
 				0445EE0525D5BD4900F20476 /* CurrentWeather.swift in Sources */,
 				0441730725DF077C00508885 /* CoreDataManager.swift in Sources */,
 				044407EE24CF35F1005072D0 /* AppDelegate.swift in Sources */,
